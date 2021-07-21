@@ -6,8 +6,7 @@ namespace linecomparison
     {
         static void Main(string[] args)
         {
-            linecomparison line = new linecomparison();
-            line.welcome();
+            linecomparison line = new linecomparison(1,3,5,7);
         }
     }
 }
