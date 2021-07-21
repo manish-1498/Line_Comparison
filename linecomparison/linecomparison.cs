@@ -7,7 +7,7 @@ namespace linecomparison
     class linecomparison
     {
         int x1, x2,x3,x4, y1, y2,y3,y4;
-        public linecomparison(int x1, int x2, int x3, int x4, int y1, int y2, int y3, int y4)
+        public linecomparison(int x1, int x2, int y1, int y2, int x3, int x4, int y3, int y4)
         {
             this.x1 = x1;
             this.x2 = x2;
@@ -29,10 +29,18 @@ namespace linecomparison
             Console.WriteLine("length of line one is:" + lengthofline1);
             double lengthofline2 = Math.Sqrt(Math.Pow((x4 - x3), 2) + Math.Pow((y4 - y3), 2));
             Console.WriteLine("length of line two is :" + lengthofline2);
-            if(lengthofline1==lengthofline2)
+            if (lengthofline1 == lengthofline2)
+            {
                 Console.WriteLine("Both lines are equal");
+            }
+            else if (lengthofline1 > lengthofline2)
+            {
+                Console.WriteLine("length of first line is greater than second line");
+            }
             else
-                Console.WriteLine("lines are unequal");
+            {
+                Console.WriteLine("lines are not equal and length of first line is less than second line");
+            }
         }
     }
 }
